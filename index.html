@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body class="conteiner">
+    <header class="header">
+        <h1>Calculos</h1>
+        <div class="tabs-container">
+            <div class="tab" onclick="changeTab(0)">Grafico General</div>
+            <div class="tab" onclick="changeTab(1)">Grafico SubCategorias No Match</div>
+            <div class="tab" onclick="changeTab(2)">Histograma</div>
+        </div>
+    </header>
+    <div id="containerSkeleton">
+        <div id="skeleton" class="skeleton"></div>
+        <div class="porcentajesSkeleton">
+            <span id="textSkeleton"></span>
+            <br>
+            <span id="textSkeleton"></span>
+            <br>
+            <span id="textSkeleton"></span>
+        </div>
+    </div>
+    <div class="tab-content" id="tabContent1">
+        <section class="section1">
+            <div id="primerGrafico" class="primer_grafico">
+                <canvas id="graficoGeneral" class="graficoGeneral"></canvas>
+            </div>
+            <div class="div_porcentajes">
+                <p class="textMatch" id="porcentaje_match"></p>
+                <br>
+                <p class="textNoMatch" id="porcentaje_no_match"></p>
+                <br>
+                <p class="textCantidadTotal" id="cantidadTotal"></p>
+            </div>
+        </section>
+    </div>
+    <div class="tab-content" id="tabContent2">
+        <section class="section5">
+            <canvas id="graficosSubCategoriasGenerales"></canvas>
+        </section>
+    </div>
+    <div class="tab-content" id="tabContent3">
+
+        <section class="section3">
+            <p class="tituloSection3">Grafico General</p>
+            <img class="imagen" src="./img/GraficoScore-Cant-Archivos.png" alt="">
+        </section>
+    </div>
+    <footer class="footer">
+        <p>footer</p>
+    </footer>
+<script src="./js/script.js"></script>
+</body>
+
+</html>
